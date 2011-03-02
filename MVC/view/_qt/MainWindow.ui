@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>BioTx</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="timeButton">
+        <property name="text">
+         <string>Current Time</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="downloadButton">
+        <property name="text">
+         <string>Download</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="uploadButton">
+        <property name="text">
+         <string>Upload</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="Spreadsheet" name="tableView"/>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Tx</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTextBrowser" name="txTextBrowser">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>100</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Rx</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTextBrowser" name="rxTextBrowser">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>100</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuSoubor">
+    <property name="title">
+     <string>Soubor</string>
+    </property>
+    <addaction name="actionNov"/>
+    <addaction name="actionOtev_t"/>
+    <addaction name="actionUlo_it"/>
+    <addaction name="actionUlo_it_jako"/>
+   </widget>
+   <widget class="QMenu" name="menuBIOTX">
+    <property name="title">
+     <string>BIOTX</string>
+    </property>
+    <addaction name="actionDownload_data"/>
+    <addaction name="actionUpload_data"/>
+    <addaction name="actionNastavit_hodiny"/>
+    <addaction name="actionZm_na_S_N"/>
+    <addaction name="actionNastaven_korekce"/>
+   </widget>
+   <widget class="QMenu" name="menuNastaveni">
+    <property name="title">
+     <string>Nastavení</string>
+    </property>
+    <addaction name="actionCOM_Port"/>
+   </widget>
+   <widget class="QMenu" name="menuN_pov_da">
+    <property name="title">
+     <string>Nápověda</string>
+    </property>
+    <addaction name="actionHelo"/>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuSoubor"/>
+   <addaction name="menuBIOTX"/>
+   <addaction name="menuNastaveni"/>
+   <addaction name="menuN_pov_da"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionNov">
+   <property name="text">
+    <string>Nový</string>
+   </property>
+  </action>
+  <action name="actionOtev_t">
+   <property name="text">
+    <string>Otevřít</string>
+   </property>
+  </action>
+  <action name="actionUlo_it">
+   <property name="text">
+    <string>Uložit</string>
+   </property>
+  </action>
+  <action name="actionUlo_it_jako">
+   <property name="text">
+    <string>Uložit jako</string>
+   </property>
+  </action>
+  <action name="actionDownload_data">
+   <property name="text">
+    <string>Download data</string>
+   </property>
+  </action>
+  <action name="actionUpload_data">
+   <property name="text">
+    <string>Upload data</string>
+   </property>
+  </action>
+  <action name="actionNastavit_hodiny">
+   <property name="text">
+    <string>Nastavit hodiny</string>
+   </property>
+  </action>
+  <action name="actionZm_na_S_N">
+   <property name="text">
+    <string>Změna S/N</string>
+   </property>
+  </action>
+  <action name="actionNastaven_korekce">
+   <property name="text">
+    <string>Nastavení korekce</string>
+   </property>
+  </action>
+  <action name="actionCOM_Port">
+   <property name="text">
+    <string>COM Port</string>
+   </property>
+  </action>
+  <action name="actionHelo">
+   <property name="text">
+    <string>Help</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Spreadsheet</class>
+   <extends>QTableWidget</extends>
+   <header location="global">spreadsheet.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
